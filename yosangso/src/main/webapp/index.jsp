@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,17 +18,12 @@
         <!-- 헤더 -->
         <jsp:include page="/WEB-INF/views/common/header.jsp"/>
         
-        
-       
-       
 
 
-
-
-
-
-        
-
+	<form action="cart/shoppingCart" method="get">
+		<input type="text" name="userNum">
+		<button>담기</button>
+	</form>
     <!-- 헤더, 컨텐츠 끝 -->
     </main>
 

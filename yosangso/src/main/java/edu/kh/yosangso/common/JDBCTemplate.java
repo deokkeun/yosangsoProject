@@ -31,35 +31,35 @@ public class JDBCTemplate {
 	
 	public static void close(Connection conn) {
 		try {
-			if(conn != null && !conn.isClosed()) close(conn);
+			if(conn != null && !conn.isClosed()) conn.close();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	public static void close(Statement stmt) {
 		try {
-			if(stmt != null && !stmt.isClosed()) close(stmt);
+			if(stmt != null && !stmt.isClosed()) stmt.close();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	public static void close(ResultSet rs) {
 		try {
-			if(rs != null && !rs.isClosed()) close(rs);
+			if(rs != null && !rs.isClosed()) rs.close();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	public static void commit(Connection conn) {
 		try {
-			if(conn != null && !conn.isClosed()) close(conn);
+			if(conn != null && !conn.isClosed()) conn.commit();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	public static void rollback(Connection conn) {
 		try {
-			if(conn != null && !conn.isClosed()) close(conn);
+			if(conn != null && !conn.isClosed()) conn.rollback();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

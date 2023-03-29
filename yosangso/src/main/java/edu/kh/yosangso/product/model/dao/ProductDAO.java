@@ -1,10 +1,15 @@
 package edu.kh.yosangso.product.model.dao;
 
 import java.io.FileInputStream;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
+
+import edu.kh.yosangso.product.model.vo.Product;
 
 public class ProductDAO {
 
@@ -24,6 +29,13 @@ public class ProductDAO {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}	
+	}
+
+	public List<Product> selectProduct(Connection conn, int productNo) throws Exception {
+		
+		List<Product> list = new ArrayList<Product>();
+		
+		return null;
 	}
 	
 	

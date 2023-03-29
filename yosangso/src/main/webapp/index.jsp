@@ -14,12 +14,58 @@
 <body>
     <!-- 헤더, 컨텐츠 -->
     <main>
+       <c:choose>
+       
+       	<c:when test="${empty sessionScope.loginMember }">
+       	
+       		<!-- 절대경로  /yosangso/member/login.jsp -->
+       		<form action="member/login" method="post" name="login-form" onsubmit="return loginValidate()">
+       			
+       			<fieldset id="id-pw-area">
+       				<section>
+       					<!-- 쿠키 출력 -->
+       					<input type="text" name="inputEmail" placeholder="아이디(이메일)" value="${cookie.saveId.value}">
+       					<input type="password" name="inputPw" placeholder="비밀번호">		
+       				</section>
+       				
+       				<section>
+       					<button>로그인</button>
+       				</section>
+       			</fieldset>
+       			
+       			<c:if test="${ !empty cookie.saveId.value }">   			
+ 	      			<c:set var="chk" value="checked"/>
+       			</c:if>
+       			
+       			<label>
+       				<input type="checkbox" name="saveId" ${chk} id="saveId"> 로그인 상태 유지
+       			</label>
+       			
+       			<!-- 로그인 index.jsp 끝 -->
+       			
+       			
+       			<!-- 회원가입 영역 시작-->
+       		</form>
+       		
+       	
+       	
+       	
+       	
+       	
+       	</c:when>
+       
+       
+       </c:choose>
         
-        <!-- 헤더 -->
-        <jsp:include page="/WEB-INF/views/common/header.jsp"/>
         
-
-
+        
+        
+        
+        
+        
+        
+        
+   
 	<form action="cart/shoppingCart" method="get">
 		<input type="text" name="userNum">
 		<button>담기</button>
@@ -27,6 +73,8 @@
     <!-- 헤더, 컨텐츠 끝 -->
     </main>
 
+    <!-- 헤더 -->
+    <jsp:include page="/WEB-INF/views/common/header.jsp"/>
 
     <!-- 푸터 -->
   	<jsp:include page="/WEB-INF/views/common/footer.jsp"/>

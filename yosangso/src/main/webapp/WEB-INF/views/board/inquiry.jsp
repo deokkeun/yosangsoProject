@@ -32,25 +32,55 @@
                 <!-- 컨텐츠 내용 오른쪽 -->
                 <section  class="content-box-right">
 
+                    <section class="right">
+
+                            
+                        <div id="left-space"></div>
+
+
+                        <div id="middle-area">
+                            <div class="topQuestion">
+                                <div>
+                                    <h1>1:1 문의</h1>
+                                </div>
+                                <div>
+                                구매하려는 상품에 대해 궁금한 점이 있으신 경우 문의해주세요.
+                                </div>
+                            </div>
+                            
+                            <div class="textAreaBox">
+                                <div>
+                                    <h1>1:1 문의 작성하기</h1>
+                                </div>
+
+                                <div>
+                                    <textarea name="" id="" cols="100" rows="20" placeholder="문의를 남겨주세요."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="questionBtnBox">
+                                <div class="cancelWritingBox">
+                                    <form action="">
+                                        <button id="cancelWritingQ">취소하기</button>
+                                    </form>
+                                </div>
+
+                                <div class="confirmWritingBox">
+                                    <form action="">
+                                        <button id="confirmWritingQ">작성하기</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
 
 
 
 
+                        <div id="right-space"></div>
 
-
-
-
-
-                    
-                    <div>inquiry</div>
-
-
-
-
-
-
-
-
+                    </section>
+                
 
                 </section>
 

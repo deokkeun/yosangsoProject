@@ -95,7 +95,7 @@
                                     <div class="review-content3">
                                         <form action="#">
                                             <button type="button" id="reviewCancel">취소하기</button>
-                                            <button type="button" id="reviewUpdate">등록하기</button>
+                                            <button type="button" id="reviewUpdate">수정하기</button>
                                         </form>
                                     </div>
         

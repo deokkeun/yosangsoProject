@@ -14,21 +14,24 @@
 </head>
 <body>
     <!-- 헤더, 컨텐츠 -->
-    <main>
-        
-        <!-- 헤더 -->
-        <jsp:include page="/WEB-INF/views/common/header.jsp"/>
-        
-        
-       
-       
-        <div>로그인</div>
-
-
-
-
-
-        
+     <main>
+    <!-- 헤더 -->
+    <jsp:include page="/WEB-INF/views/common/header.jsp"/>
+    	<h1>로그인 결과</h1>
+    	
+    	<%= request.getParameter("inputId") %>
+    	
+    	<br>
+    	
+    	<%= request.getParameter("inputPw") %>
+    	
+    	<br>
+    	
+		<%	String res = (String)request.getAttribute("r"); %>
+		
+		<h3 style = 'color:green;'>	<%= res %> </h3>
+		
+		<button type='button' onclick='history.back()'> 돌아가기 </button>
 
     <!-- 헤더, 컨텐츠 끝 -->
     </main>

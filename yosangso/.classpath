@@ -8,11 +8,13 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0">
-		<attributes>
-			<attribute name="owner.project.facets" value="jst.web"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/yosangso"/>
+	<classpathentry kind="lib" path="C:/Users/junsu/OneDrive/바탕 화면/Tools/lib/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/junsu/OneDrive/바탕 화면/Tools/lib/gson-2.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/junsu/OneDrive/바탕 화면/Tools/lib/javax.mail-1.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/junsu/OneDrive/바탕 화면/Tools/lib/ojdbc11-21.7.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/junsu/OneDrive/바탕 화면/Tools/lib/taglibs-standard-impl-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/junsu/OneDrive/바탕 화면/Tools/lib/taglibs-standard-jstlel-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/junsu/OneDrive/바탕 화면/Tools/lib/taglibs-standard-spec-1.2.5.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0"/>
 	<classpathentry kind="output" path="src/main/webapp/WEB-INF/classes"/>
 </classpath>

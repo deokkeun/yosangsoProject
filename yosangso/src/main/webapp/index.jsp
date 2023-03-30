@@ -15,7 +15,7 @@
     <!-- 헤더, 컨텐츠 -->
     <main>
        <c:choose>
-       
+              
        	<c:when test="${empty sessionScope.loginMember }">
        	
        		<!-- 절대경로  /yosangso/member/login.jsp -->
@@ -59,7 +59,7 @@
         
         
         
-        
+        <a href="/product/productDetail?ProductNo">제품상세정보</a>
         
         
         

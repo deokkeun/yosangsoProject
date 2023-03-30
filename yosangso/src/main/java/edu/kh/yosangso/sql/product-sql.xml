@@ -3,7 +3,14 @@
 <properties>
 	<comment>product-sql.xml</comment>
 
-	<entry key=""></entry>
+	<!-- 상품 정보 선택 SQL -->
+
+
+	<entry key="selectProduct">
+	SELECT PRODUCT_NO, PRODUCT_NM, CATEGORY , PRICE , STOCK , PRODUCT_DATE , SELL_RATE , EXPLAIN , PRODUCT_IMAGES, PART
+	FROM PRODUCT
+	WHERE PRODUCT_NO = ? 
+	</entry>
 	<entry key=""></entry>
 	<entry key=""></entry>
 	<entry key=""></entry>

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import static edu.kh.yosangso.common.JDBCTemplate.*;
 import edu.kh.yosangso.product.model.vo.Product;
 
 public class ProductDAO {
@@ -31,11 +32,55 @@ public class ProductDAO {
 		}	
 	}
 
-	public List<Product> selectProduct(Connection conn, int productNo) throws Exception {
+	/**상품 정보 선택 DAO
+	 * @param conn
+	 * @param productNo
+	 * @return
+	 * @throws Exception
+	 */
+	public List<Product> selectProduct(Connection conn, int pro) throws Exception {
 		
-		List<Product> list = new ArrayList<Product>();
+		List<Product> productList = new ArrayList<>();
 		
-		return null;
+		try {
+			String sql = prop.getProperty("selectProduct");
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, pro);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				
+				int productNo = rs.getInt("PRODUCT_NO");
+				String productName = rs.getString("PRODUCT_NM");
+				String category = rs.getString("CATEGORY");
+				int price = rs.getInt("PRICE");
+				int stock = rs.getInt("STOCK");
+				String productDate = rs.getString("PRODUCT_DATE");
+				int sellRate = rs.getInt("SELL_RATE");
+				String explain = rs.getString("EXPLAIN");
+				String productImage = rs.getString("PRODUCT_IMAGES");
+				String part = rs.getString("PART");
+				
+				productList.add(
+						new Product(productNo, productName, category, price, stock, productDate, sellRate,
+								explain, productImage, part)
+						);
+			} 
+			
+		} finally {
+			close(rs);
+			close(stmt);
+		}
+		
+		System.out.println(productList);
+		System.out.println(conn);
+		
+		return productList;
+		
+
 	}
 	
 	

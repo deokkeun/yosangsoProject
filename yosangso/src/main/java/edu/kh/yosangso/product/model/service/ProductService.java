@@ -17,26 +17,23 @@ public class ProductService {
 
 	private ProductDAO dao = new ProductDAO();
 
-	/** 상품 정보 service
+	/** 상품 정보 선택 service
 	 * @return
 	 */
-	public List<Product> selectProduct(int productNo) {
+	public List<Product> selectProduct(int pro) throws Exception{
 		Connection conn = getConnection();
 		
-		List<Product> list = dao.selectProduct(conn, productNo);
+		List<Product> productList = dao.selectProduct(conn, pro);
 		
 		close(conn);
 		
-		return list;
+		System.out.println(productList);
+		
+		return productList;
 	}
 	
 	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	

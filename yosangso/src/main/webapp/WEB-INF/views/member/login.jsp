@@ -14,25 +14,54 @@
 </head>
 <body>
     <!-- 헤더, 컨텐츠 -->
-    <main>
-        
-        <!-- 헤더 -->
-        <jsp:include page="/WEB-INF/views/common/header.jsp"/>
-        
-        
-       
-       
-        <div>로그인</div>
+     <main>
+    <!-- 헤더 -->
+    <jsp:include page="/WEB-INF/views/common/header.jsp"/>
+    	
+<!---------------------- 정오 로그인 시작---------------------->
+<!---------------------- 정오 로그인 시작---------------------->
+<!---------------------- 정오 로그인 시작---------------------->
 
+    <!-- content 전체 감싸는 영역 -->
+    <section class="content-container">
 
+        <div class = "login_wrapper">
+            <h3>
+                <div class= "login_logo">요생소</div>
+            </h3>
 
+            <div class= "login_form">
+                    <input id="LOGIN_ID" class="login_text" type="text" name="id" placeholder="    아이디">
+                    <input id="LOGIN_PW" class="login_text" type="password" name="id" placeholder="    비밀번호">
+            </div>
 
+    <!-- 로그인 상태 유지 / 아이디 비밀번호 찾기 -->
+            <div class="form-check">
+                <label><input type="checkbox" id="exampleCheck1" class="form-check-input">&nbsp;&nbsp;&nbsp;로그인 상태 유지</label>
+                <label class="form-check-label" for="exampleCheck2">&nbsp;</label>
+                    
+            <div class="form-check2">
+                <a class="login_bottom" href="">아이디/비밀번호 찾기 ></a>
+            </div>
 
-        
+            <br>
+                <button id="LOGIN_BTN" class="login_btn" type="button" disabled>로그인</button>
+                  
+                <div class="kakao">
+                    <button id="LOGIN_KAKAO" CLASS="login_btn2" type="button" disabled>카카오 로그인</button>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+    
+<!---------------------- 정오 로그인 시작---------------------->
+<!---------------------- 정오 로그인 시작---------------------->
+<!---------------------- 정오 로그인 시작---------------------->
 
     <!-- 헤더, 컨텐츠 끝 -->
     </main>
-
 
     <!-- 푸터 -->
   	<jsp:include page="/WEB-INF/views/common/footer.jsp"/>

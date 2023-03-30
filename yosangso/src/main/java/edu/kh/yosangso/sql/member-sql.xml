@@ -3,13 +3,23 @@
 <properties>
 	<comment>member-sql.xml</comment>
 
-	<entry key=""></entry>
-	<entry key=""></entry>
-	<entry key=""></entry>
-	<entry key=""></entry>
-	<entry key=""></entry>
-	<entry key=""></entry>
-	<entry key=""></entry>
+	<!-- 로그인(비밀번호, 탈퇴여부 제외) -->
+	<!-- 요생소 SELECT 구문 확인하기!!! -->
+	<entry key="login">
+		SELECT MEMBER_NO,MEMBER_EMAIL,MEMBER_NICK ,MEMBER_TEL,
+     	MEMBER_ADDR, PROFILE_IMG, 
+   		TO_CHAR( ENROLL_DT, 'YYYY-MM-DD HH24:MI:SS') AS ENROLL_DT
+		FROM MEMBER
+		WHERE MEMBER_EMAIL = ?
+		AND MEMBER_PW = ?
+		AND SECESSION_FL = 'N'
+	</entry>
+	
+	<!-- 회원가입 -->
+	<entry key="signUp">
+		INSERT INTO MEMBER
+		VALUES(SEQ_MEMBER_NO.NEXTVAL , ? , ? , ? , ? , ?, DEFAULT, DEFAULT, DEFAULT)
+	</entry>
 
 
 </properties>

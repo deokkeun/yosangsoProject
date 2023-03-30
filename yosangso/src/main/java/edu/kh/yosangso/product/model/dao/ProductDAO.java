@@ -14,6 +14,7 @@ public class ProductDAO {
 	private Properties prop;
 	
 	public ProductDAO() {
+		
 		try {
 			prop = new Properties();
 			

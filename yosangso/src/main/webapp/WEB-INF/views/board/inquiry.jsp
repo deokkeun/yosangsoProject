@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${contextPath}/resources/css/main-style.css">
     <link rel="stylesheet" href="${contextPath}/resources/css/main-sub-style.css">
+    <link rel="stylesheet" href="${contextPath}/resources/css/inquiry/inquiryWriting.css">
     <script src="https://kit.fontawesome.com/881d1deef7.js" crossorigin="anonymous"></script>
     <title>inquiry</title>
 </head>
@@ -37,7 +38,7 @@
                             
                         <div id="left-space"></div>
 
-
+                    <form action="">
                         <div id="middle-area">
                             <div class="topQuestion">
                                 <div>
@@ -54,25 +55,26 @@
                                 </div>
 
                                 <div>
-                                    <textarea name="" id="" cols="100" rows="20" placeholder="문의를 남겨주세요."></textarea>
+                                    <textarea name="" id="inquiryContent" cols="100" rows="20" placeholder="문의를 남겨주세요." value="inquiryContent"></textarea>
                                 </div>
                             </div>
 
                             <div class="questionBtnBox">
                                 <div class="cancelWritingBox">
-                                    <form action="">
+                                   
                                         <button id="cancelWritingQ">취소하기</button>
-                                    </form>
+                                   
                                 </div>
 
                                 <div class="confirmWritingBox">
-                                    <form action="">
+                                    
                                         <button id="confirmWritingQ">작성하기</button>
-                                    </form>
+                                    
                                 </div>
                             </div>
 
                         </div>
+                    </form>
 
 
 
@@ -103,5 +105,8 @@
    
     <!-- main.js 연결 -->
     <script src="${contextPath}/resources/js/main.js"></script>
+
+    <!-- inquiryAdd.js 연결 -->
+    <script src="${contextPath}/resources/js/board/inquiryAdd.js"></script>
 </body>
 </html>

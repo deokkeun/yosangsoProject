@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${contextPath}/resources/css/main-style.css">
+    <link rel="stylesheet" href="${contextPath}/resources/css/inquiry/inquiryList.css">
     <script src="https://kit.fontawesome.com/881d1deef7.js" crossorigin="anonymous"></script>
     <title>FAQ</title>
 </head>
@@ -56,143 +57,179 @@
                             <div>작성일</div>
                         </div>
 
-                        <div class="middleListOutBox">
-
-
-
-
-                            <div class="middleOfList">
-                                <div>45</div>
-                                <div>재입고 언제 되나요 1</div>
-                                <div>세미</div>
-                                <div>2023.02.17 17:54</div>
-                            </div>
-
-                            <div class="answerBox">
-
-                                <div class="questionTitleBox">
-                                    <p><span>Q</span></p>
-                                    <p><span>재입고 언제 되나요 </span></p>
-                                </div>
-
+                         <!-- 현재 로그인 한 사람의 정보가 담긴 변수 -->
+                        <c:set var="cookie" value=""/>
                         
+                        <%
+                        	Member mem = sessionScope.getAttribute("loginMember")
+                        	
+                        	
+                        	
 
-                                <div class="answerInnerBox">
-                                    <p><span>A</span></p>
-                                    <p><span>내일쯤 되지 않을까요? 깔깔 몰라융 내가 어떻게 알아요~</span></p>
+                         %>
+                        
+                        <!-- 현재 로그인 한 사람의 게시물 정보가 담긴 변수 -->
+                        <c:set var="inquiryCookie" value=""/>
+
+                        <c:choose>
+                            <c:when test="${}">
+
+                            <div class="middleListOutBox">
+
+
+								<%-- 
+									1. sessionScope 에 저장되어있는 현재 로그인된 멤버얻어오기
+									2. 글에 저장되어있는 회원번호 얻어오기
+									3. 현재 로그인한 멤버와 글의 회원번호가 일치하면 버튼 띄우기
+									-> 버튼에만 해당 조건문 걸기 
+								
+								 --%>	
+								 
+								 
+								
+                                <div class="middleOfList">
+                                    <div>45</div>
+                                    <div>재입고 언제 되나요 1</div>
+                                    <div>세미</div>
+                                    <div>2023.02.17 17:54</div>
                                 </div>
-                                
-                            </div>
-
-
+    
+                                <div class="answerBox">
+    
+                                    <div class="questionTitleBox">
+                                        <p><span>Q</span></p>
+                                        <p><span>재입고 언제 되나요 </span></p>
+                                        <button>수정하기</button>
+                                        <button>삭제하기</button>  
+                                    </div>
+    
                             
-
-                            <div class="middleOfList">
-                                <div>45</div>
-                                <div>재입고 언제 되나요 2</div>
+    
+                                    <div class="answerInnerBox">
+                                        <p><span>A</span></p>
+                                        <p><span>내일쯤 되지 않을까요? 깔깔 몰라융 내가 어떻게 알아요~</span></p>
+                                    </div>
+                                    
+                                </div>
+    
+    
+                                
+    
+                                <div class="middleOfList">
+                                    <div>45</div>
+                                    <div>재입고 언제 되나요 2</div>
+                                
+                                    <div>세미</div>
+                                    <div>2023.02.17 17:54</div>
+                                </div>
+    
+                                <div class="answerBox">
+    
+                                    <div class="questionTitleBox">
+                                        <p><span>Q</span></p>
+                                        <p><span>재입고 언제 되나요 </span></p>
+                                    </div>
+    
                             
-                                <div>세미</div>
-                                <div>2023.02.17 17:54</div>
-                            </div>
-
-                            <div class="answerBox">
-
-                                <div class="questionTitleBox">
-                                    <p><span>Q</span></p>
-                                    <p><span>재입고 언제 되나요 </span></p>
+    
+                                    <div class="answerInnerBox">
+                                        <p><span>A</span></p>
+                                        <p><span>내일쯤 되지 않을까요? 깔깔 몰라융 내가 어떻게 알아요~</span></p>
+                                    </div>
+                                    
                                 </div>
-
-                        
-
-                                <div class="answerInnerBox">
-                                    <p><span>A</span></p>
-                                    <p><span>내일쯤 되지 않을까요? 깔깔 몰라융 내가 어떻게 알아요~</span></p>
+    
+    
+    
+                                <div class="middleOfList">
+                                    <div>45</div>
+                                    <div>재입고 언제 되나요 3</div>
+                                    
+                                    <div>세미</div>
+                                    <div>2023.02.17 17:54</div>
                                 </div>
-                                
-                            </div>
-
-
-
-                            <div class="middleOfList">
-                                <div>45</div>
-                                <div>재입고 언제 되나요 3</div>
-                                
-                                <div>세미</div>
-                                <div>2023.02.17 17:54</div>
-                            </div>
-
-                            <div class="answerBox">
-
-                                <div class="questionTitleBox">
-                                    <p><span>Q</span></p>
-                                    <p><span>재입고 언제 되나요 </span></p>
-                                </div>
-
-                        
-
-                                <div class="answerInnerBox">
-                                    <p><span>A</span></p>
-                                    <p><span>내일쯤 되지 않을까요? 깔깔 몰라융 내가 어떻게 알아요~ㅁㄴㅇㅁㅇ</span></p>
-                                </div>
-                                
-                            </div>
-
-
-
-                            <div class="middleOfList">
-                                <div>45</div>
-                                <div>재입고 언제 되나요 4</div>
-                                
-                                <div>세미</div>
-                                <div>2023.02.17 17:54</div>
-                            </div>
-
-                            <div class="answerBox">
-
-                                <div class="questionTitleBox">
-                                    <p><span>Q</span></p>
-                                    <p><span>재입고 언제 되나요 ㅠㅠㅠㅠ</span></p>
-                                </div>
-
-                        
-
-                                <div class="answerInnerBox">
-                                    <p><span>A</span></p>
-                                    <p><span>내일쯤 되지 않을까요? 깔깔 몰라융 내가 어떻게 알아요~</span></p>
-                                </div>
-                                
-                            </div>
-
-
-
-                            <div class="middleOfList">
-                                <div>45</div>
-                                <div>재입고 언제 되나요 5</div>
+    
+                                <div class="answerBox">
+    
+                                    <div class="questionTitleBox">
+                                        <p><span>Q</span></p>
+                                        <p><span>재입고 언제 되나요 </span></p>
+                                    </div>
+    
                             
-                                <div>세미</div>
-                                <div>2023.02.17 17:54</div>
+    
+                                    <div class="answerInnerBox">
+                                        <p><span>A</span></p>
+                                        <p><span>내일쯤 되지 않을까요? 깔깔 몰라융 내가 어떻게 알아요~ㅁㄴㅇㅁㅇ</span></p>
+                                    </div>
+                                    
+                                </div>
+    
+    
+    
+                                <div class="middleOfList">
+                                    <div>45</div>
+                                    <div>재입고 언제 되나요 4</div>
+                                    
+                                    <div>세미</div>
+                                    <div>2023.02.17 17:54</div>
+                                </div>
+    
+                                <div class="answerBox">
+    
+                                    <div class="questionTitleBox">
+                                        <p><span>Q</span></p>
+                                        <p><span>재입고 언제 되나요 ㅠㅠㅠㅠ</span></p>
+                                    </div>
+    
+                            
+    
+                                    <div class="answerInnerBox">
+                                        <p><span>A</span></p>
+                                        <p><span>내일쯤 되지 않을까요? 깔깔 몰라융 내가 어떻게 알아요~</span></p>
+                                    </div>
+                                    
+                                </div>
+    
+    
+    
+                                <div class="middleOfList">
+                                    <div>45</div>
+                                    <div>재입고 언제 되나요 5</div>
+                                
+                                    <div>세미</div>
+                                    <div>2023.02.17 17:54</div>
+                                </div>
+    
+                                <div class="answerBox">
+    
+                                    <div class="questionTitleBox">
+                                        <p><span>Q</span></p>
+                                        <p><span>깔깔 몰라융 내가 어떻게 알아요~</span></p>
+                                    </div>
+    
+                            
+    
+                                    <div class="answerInnerBox">
+                                        <p><span>A</span></p>
+                                        <p><span>
+                                            내일쯤 되지 않을까요? 깔깔 몰라융 내가 어떻게 알아요~
+                                            깔깔 몰라융 내가 어떻게 알아요~
+                                        </span></p>
+                                    </div>
+                                    
+                                </div>
+    
                             </div>
 
-                            <div class="answerBox">
 
-                                <div class="questionTitleBox">
-                                    <p><span>Q</span></p>
-                                    <p><span>깔깔 몰라융 내가 어떻게 알아요~</span></p>
-                                </div>
+
+
+
+                            </c:when>
+                        </c:choose>
 
                         
-
-                                <div class="answerInnerBox">
-                                    <p><span>A</span></p>
-                                    <p><span>
-                                        내일쯤 되지 않을까요? 깔깔 몰라융 내가 어떻게 알아요~
-                                        깔깔 몰라융 내가 어떻게 알아요~
-                                    </span></p>
-                                </div>
-                                
-                            </div>
-
-                        </div>
 
                     </div>
 
@@ -226,6 +263,8 @@
 
         </section>
 
+        
+
 
 
 
@@ -240,10 +279,43 @@
     <!-- 푸터 -->
   	<jsp:include page="/WEB-INF/views/common/footer.jsp"/>
 
+
+
+      <script>
+        
+
+        $(function(){
+            // 요소 불러와서 이벤트 주기
+            $(".middleOfList > div:nth-child(2)").on("click", e =>{
+                if($(".answerBox").css("display") == "none") {
+
+                    console.log("if 실행");
+                    $(".answerBox").slideUp();
+                    $(e.target).parent().next().slideDown();
+                    console.log("if 실행 후");  
+                }
+                else{
+                    console.log("else 실행");
+                    $(".answerBox").slideUp();
+                    $(e.target).parent().next().slideDown();
+                    console.log("else 실행 후");
+                }
+            });
+
+        });
+
+
+
+
+    </script>
+
 	<!-- jQuery 라이브러리 추가 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
    
     <!-- main.js 연결 -->
     <script src="${contextPath}/resources/js/main.js"></script>
+
+    <!-- inquiryList.js 연결 -->
+    <script src="${contextPath}/resources/js/board/inquiryList.js"></script>
 </body>
 </html>

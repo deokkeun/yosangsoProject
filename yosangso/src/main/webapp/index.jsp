@@ -8,21 +8,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/main-index.css">
     <link rel="stylesheet" href="resources/css/main-style.css">
     <script src="https://kit.fontawesome.com/881d1deef7.js" crossorigin="anonymous"></script>
-    
     <!-- 슬라이더 파일다운받은거 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <title>index</title>
-    
-    <!--탑 버튼 & 스크립트 html 부분-->
-    
-    <!--탑 버튼-->
-    <a id="topBtn" href="#"> 
-        <i class="fa-solid fa-angles-up fa-2x"></i>
-    </a> 
-    
 </head>
 <body>
     <!-- 헤더, 컨텐츠 -->
@@ -31,6 +23,17 @@
         <!-- 헤더 -->
         <jsp:include page="/WEB-INF/views/common/header.jsp"/>
         
+        
+        
+        
+        
+        
+    <!--탑 버튼 & 스크립트 html 부분-->
+    
+    <!--탑 버튼-->
+    <a id="topBtn" href="#"> 
+        <i class="fa-solid fa-angles-up fa-2x"></i>
+    </a> 
     
 
 
@@ -530,10 +533,14 @@
     <!-- 푸터 -->
   	<jsp:include page="/WEB-INF/views/common/footer.jsp"/>
 
+    <!-- main.js 연결 -->
+    <script src="${contextPath}/resources/js/main.js"></script>
+    
+    <!-- main-index.js 연결 -->
+    <script src="${contextPath}/resources/js/main-index.js"></script>
+    
 	<!-- jQuery 라이브러리 추가 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
    
-    <!-- main.js 연결 -->
-    <script src="${contextPath}/resources/js/main.js"></script>
 </body>
 </html>

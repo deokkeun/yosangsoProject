@@ -8,7 +8,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 헤더/풋터 css -->
     <link rel="stylesheet" href="resources/css/main-style.css">
+    <!-- 메인페이지 css  -->
+
     <link rel="stylesheet" href="resources/css/index.css">
     <script src="https://kit.fontawesome.com/881d1deef7.js" crossorigin="anonymous"></script>
     
@@ -485,7 +488,8 @@
 
                  <!-- 인체사진 플로팅바-->
                  <div class="floating">
-                    <a href="${contextPath}/product/people"> 
+
+                    <a href="#"> 
                         <img id="people" src="resources/image/index/인체이미지누끼.png" >
                     </a>
                 </div>

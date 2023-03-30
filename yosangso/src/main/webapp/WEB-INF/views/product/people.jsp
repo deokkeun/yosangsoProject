@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="${contextPath}/resources/css/main-style.css">
-    <link rel="stylesheet" href="${contextPath}/resources/css/product/people.css">
+    <link rel="stylesheet" href="resources/css/main-style.css">
+    <link rel="stylesheet" href="resources/css/product/people.css">
     <script src="https://kit.fontawesome.com/881d1deef7.js" crossorigin="anonymous"></script>
     <title>index</title>
 </head>
@@ -20,7 +20,8 @@
         <!-- 헤더 -->
         <jsp:include page="/WEB-INF/views/common/header.jsp"/>
         
-        
+       
+       
         <!-- 컨텐츠 -->
         <section id="content">
 
@@ -29,7 +30,7 @@
 
                 <section class="content-box-left">
                     <div>
-                        <a href="./index.html" class="fa-solid fa-arrow-left" target="#"></a>
+                        <a href="history.back()" class="fa-solid fa-arrow-left" target="#"></a>
                     </div>
                     <section class="content-box-left-title">
                         <div class="person-img">
@@ -46,53 +47,53 @@
                     <section class="content-box-left-content">
                         <ul>
                             <li class="people-bg">
-                                <a href="./people.html" class="list" target="_self">
+                                <button class="list" target="_self" value="brains">
                                     <h2>두뇌</h2>
                                     <p></p>
                                     <p>#공부 #뇌졸증</p>
-                                </a>
+                                </button>
                             </li>
                             <li>
-                                <a href="./people2.html" class="list" target="_self">
+                                <button class="list" target="_self" value="eyes">
                                     <h2>눈</h2>
                                     <p></p>
                                     <p>#시력감소 #난시 #근시 #원시</p>
-                                </a>
+                                </button>
                             </li>
                             <li>
-                                <a href="./people3.html" class="list" target="_self">
+                                <button class="list" target="_self" value="heart">
                                     <h2>심장</h2>
                                     <p></p>
                                     <p>#어지러움 #혈압</p>
-                                </a>
+                                </button>
                             </li>
                             <li>
-                                <a href="./people4.html" class="list" target="_self">
+                                <button class="list" target="_self" value="liver">
                                     <h2>간</h2>
                                     <p></p>
                                     <p>#피로 #술</p>
-                                </a>
+                                </button>
                             </li>
                             <li>
-                                <a href="./people5.html" class="list" target="_self">
+                                <button class="list" target="_self" value="digestion">
                                     <h2>소화</h2>
                                     <p></p>
                                     <p>#소화장애</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="./people6.html" class="list" target="_self">
+                                <button class="list" target="_self" value="bone">
                                     <h2>뼈, 관절</h2>
                                     <p></p>
                                     <p>#골다공증</p>
-                                </a>
+                                </button>
                             </li>
                             <li>
-                                <a href="./people7.html" class="list" target="_self">
+                                <button class="list" target="_self" value="respiratory">
                                     <h2>호흡기</h2>
                                     <p></p>
                                     <p>#활성산소</p>
-                                </a>
+                                </button>
                             </li>
                         </ul>
                     </section>
@@ -100,101 +101,7 @@
 
 
                 <section class="content-box-right-content  people-bg">
-                    <section>
-                        <h2 class="title right-title"></h2>
-                        <div class="right-sub-title"></div>
-                    </section>
-                    <section>
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <div class="product">
-                                        <div><img src="" alt="이미지"></div>
-                                        <div>
-                                            <pre>Doctor's Best, 비타민D3, 125mcg(5,000IU), 
-소프트젤 360정
-                                            </pre>
-                                        </div>
-
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <div class="product">
-                                        <div><img src="" alt="이미지"></div>
-                                        <div>
-                                            <pre>Doctor's Best, 비타민D3, 125mcg(5,000IU), 
-소프트젤 360정
-                                            </pre>
-                                        </div>
-
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <div class="product">
-                                        <div><img src="" alt="이미지"></div>
-                                        <div>
-                                            <pre>Doctor's Best, 비타민D3, 125mcg(5,000IU), 
-소프트젤 360정
-                                            </pre>
-                                        </div>
-
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <div class="product">
-                                        <div><img src="" alt="이미지"></div>
-                                        <div>
-                                            <pre>Doctor's Best, 비타민D3, 125mcg(5,000IU), 
-소프트젤 360정
-                                            </pre>
-                                        </div>
-
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <div class="product">
-                                        <div><img src="" alt="이미지"></div>
-                                        <div>
-                                            <pre>Doctor's Best, 비타민D3, 125mcg(5,000IU), 
-소프트젤 360정
-                                            </pre>
-                                        </div>
-
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <div class="product">
-                                        <div><img src="" alt="이미지"></div>
-                                        <div>
-                                            <pre>Doctor's Best, 비타민D3, 125mcg(5,000IU), 
-소프트젤 360정
-                                            </pre>
-                                        </div>
-
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </section>
-
                 </section>
-
-            <!-- 컨텐츠 내용 끝 -->
-            </section>
-
-        </section>
-
         
         
 

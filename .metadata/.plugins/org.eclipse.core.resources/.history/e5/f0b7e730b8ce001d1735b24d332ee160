@@ -1,0 +1,27 @@
+package edu.kh.yosangso.refund.dao;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+
+import edu.kh.yosangso.order.model.vo.Order;
+
+public class RefundDAO {
+
+	public List<Order> refundList(Connection conn, String orderNo) {
+		
+		List<Order> result = new ArrayList<>();
+		
+		try {
+			
+		}finally {
+			
+			close(rs);
+			close(conn);
+		}
+		
+		
+		return result;
+	}
+
+}

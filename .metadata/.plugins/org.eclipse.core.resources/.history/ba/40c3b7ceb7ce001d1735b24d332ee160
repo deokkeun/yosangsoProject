@@ -1,0 +1,17 @@
+package edu.kh.yosangso.refund.service;
+
+import java.util.List;
+
+import edu.kh.yosangso.order.model.vo.Order;
+
+public class RefundService {
+
+	public List<Order> refundList(String orderNo) throws Exception{
+		
+		
+		
+		
+		return result;
+	}
+
+}

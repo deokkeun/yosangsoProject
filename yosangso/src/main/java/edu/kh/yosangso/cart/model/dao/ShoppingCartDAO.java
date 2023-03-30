@@ -94,7 +94,8 @@ public class ShoppingCartDAO {
 		try {
 			String sql = prop.getProperty("updateCount");
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, count -1);
+			count = count-1;
+			pstmt.setInt(1, count);
 			pstmt.setString(2, memberNo);
 			pstmt.setString(3, productNo);
 			
@@ -115,7 +116,8 @@ public class ShoppingCartDAO {
 		try {
 			String sql = prop.getProperty("updateCount");
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, count + 1);
+			count = count+1;
+			pstmt.setInt(1, count);
 			pstmt.setString(2, memberNo);
 			pstmt.setString(3, productNo);
 			

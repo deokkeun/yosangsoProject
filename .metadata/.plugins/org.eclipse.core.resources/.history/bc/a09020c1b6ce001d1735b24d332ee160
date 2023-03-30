@@ -1,0 +1,9 @@
+package edu.kh.yosangso.refund.controller;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/refund")
+public class RefundServlet extends HttpServlet{
+
+}

@@ -1,0 +1,13 @@
+package edu.kh.yosangso.order.model.vo;
+
+import lombok.Getter;
+
+@Getter
+public class Order {
+	
+	private String ProductName;
+	private int orderNo;
+	private int price;
+	private int buyingRate;
+
+}

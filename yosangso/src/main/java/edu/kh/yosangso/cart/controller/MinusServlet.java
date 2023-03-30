@@ -21,24 +21,19 @@ public class MinusServlet extends HttpServlet {
 		ShoppingCartService service = new ShoppingCartService();
 		
 		try {
-			int count = Integer.parseInt(req.getParameter("buyingRate"));
+			int count = Integer.parseInt(req.getParameter("count"));
 			if(count >1) {
 			String memberNo = req.getParameter("memberNo");
-			String productNo = req.getParameter("productNo");
+			String productNo = req.getParameter("product");
 			
 			
 			result = service.minusCount(memberNo, count, productNo);
-		
-			}else {
-				String path = "/WEB-INF/views/cart/shoppingCart.jsp";
-				if(result>0) req.getRequestDispatcher(path).forward(req, resp);
 			}
+			
+			resp.getWriter().print(result);
 			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		
-		String path = "/WEB-INF/views/cart/shoppingCart.jsp";
-		if(result>0) req.getRequestDispatcher(path).forward(req, resp);
 	}
 }

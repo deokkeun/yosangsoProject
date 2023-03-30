@@ -1,0 +1,67 @@
+package edu.kh.yosangso.refund.dao;
+
+import static edu.kh.yosangso.common.JDBCTemplate.close;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.InvalidPropertiesFormatException;
+import java.util.List;
+import java.util.Properties;
+
+import edu.kh.yosangso.order.model.vo.Order;
+
+public class RefundDAO {
+	
+	Statement stmt;
+	PreparedStatement pstmt;
+	ResultSet rs;
+	Properties prop;
+	
+	public RefundDAO() {
+		
+		prop = new Properties();
+		
+		try {
+			String filePath = RefundDAO.class.getResource("edu/kh/yosangso/sql/refund-sql.xml").getPath();
+			prop.loadFromXML(new FileInputStream(filePath));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	public List<Order> refundList(Connection conn, String memberNo) throws Exception{
+		List<Order> result = new ArrayList<>();
+		
+		try {
+			
+			String sql = prop.getProperty("refundList");
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, memberNo);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				String productName = rs.getString("PRODUCT_NM");				
+			}
+			
+		}finally {
+			
+			close(rs);
+			close(pstmt);
+		}
+		
+		
+		return result;
+	}
+
+}

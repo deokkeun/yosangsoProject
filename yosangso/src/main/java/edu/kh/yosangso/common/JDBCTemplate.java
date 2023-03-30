@@ -28,6 +28,7 @@ public class JDBCTemplate {
 		return conn;
 	}
 	
+	
 	public static void close(Connection conn) {
 		try {
 			if(conn != null && !conn.isClosed()) conn.close();
@@ -35,7 +36,6 @@ public class JDBCTemplate {
 			e.printStackTrace();
 		}
 	}
-	
 	public static void close(Statement stmt) {
 		try {
 			if(stmt != null && !stmt.isClosed()) stmt.close();
@@ -43,7 +43,6 @@ public class JDBCTemplate {
 			e.printStackTrace();
 		}
 	}
-	
 	public static void close(ResultSet rs) {
 		try {
 			if(rs != null && !rs.isClosed()) rs.close();
@@ -51,7 +50,6 @@ public class JDBCTemplate {
 			e.printStackTrace();
 		}
 	}
-	
 	public static void commit(Connection conn) {
 		try {
 			if(conn != null && !conn.isClosed()) conn.commit();
@@ -59,7 +57,6 @@ public class JDBCTemplate {
 			e.printStackTrace();
 		}
 	}
-	
 	public static void rollback(Connection conn) {
 		try {
 			if(conn != null && !conn.isClosed()) conn.rollback();

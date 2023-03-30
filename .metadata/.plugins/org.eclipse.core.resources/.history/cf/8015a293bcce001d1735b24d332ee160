@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>refund-sql.xml</comment>
+	<entry key="refundList">
+		SELECT PRODUCT_NM, ORDER_NO, ORDER_DETAIL.PRICE, BUYING_RATE FROM ORDER_DETAIL JOIN PRODUCT USING (PRODUCT_NO) JOIN "ORDER" USING(ORDER_NO) JOIN MEMBER USING(MEMBER_NO) WHERE MEMBER_NO = 1;
+	</entry>
+</properties>

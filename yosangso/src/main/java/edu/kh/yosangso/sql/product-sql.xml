@@ -3,7 +3,11 @@
 <properties>
 	<comment>product-sql.xml</comment>
 
-	<entry key=""></entry>
+	<entry key="productList">
+		SELECT PRODUCT_NM, PRODUCT_IMAGES
+		FROM PRODUCT
+		WHERE PART = ?
+	</entry>
 	<entry key=""></entry>
 	<entry key=""></entry>
 	<entry key=""></entry>

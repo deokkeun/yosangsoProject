@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -8,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/main-style.css">
+    <link rel="stylesheet" href="resources/css/index.css">
     <script src="https://kit.fontawesome.com/881d1deef7.js" crossorigin="anonymous"></script>
     
     <!-- 슬라이더 파일다운받은거 -->
@@ -26,51 +28,11 @@
 <body>
     <!-- 헤더, 컨텐츠 -->
     <main>
-       <c:choose>
-       
-       	<c:when test="${empty sessionScope.loginMember }">
-       	
-       		<!-- 절대경로  /yosangso/member/login.jsp -->
-       		<form action="member/login" method="post" name="login-form" onsubmit="return loginValidate()">
-       			
-       			<fieldset id="id-pw-area">
-       				<section>
-       					<!-- 쿠키 출력 -->
-       					<input type="text" name="inputEmail" placeholder="아이디(이메일)" value="${cookie.saveId.value}">
-       					<input type="password" name="inputPw" placeholder="비밀번호">		
-       				</section>
-       				
-       				<section>
-       					<button>로그인</button>
-       				</section>
-       			</fieldset>
-       			
-       			<c:if test="${ !empty cookie.saveId.value }">   			
- 	      			<c:set var="chk" value="checked"/>
-       			</c:if>
-       			
-       			<label>
-       				<input type="checkbox" name="saveId" ${chk} id="saveId"> 로그인 상태 유지
-       			</label>
-       			
-       			<!-- 로그인 index.jsp 끝 -->
-       			
-       			
-       			<!-- 회원가입 영역 시작-->
-       		</form>
-       		
-       	
-       	
-       	
-       	
-       	
-       	</c:when>
-       
-       
-       </c:choose>
     
-
-
+    	<!-- 헤더 -->
+    	<jsp:include page="/WEB-INF/views/common/header.jsp"/>
+    
+    
         <!-- 내용 작성 공간입니다.(template2) -->
         <!-- content 전체 감싸는 영역 -->
         <section class="content-container">
@@ -86,28 +48,22 @@
 
                 <!-- 1. 메인페이지 슬라이더 사진 영역 -->
                 <section class="mainViewPhoto">
-                   
-                
+                                 
                     <div id="visual">
-
                         <div class="on">
-                            <img src="${contextPath}/resources/image/index/메인슬라이더1편집.jpg"  width="100%">
+                            <img src="resources/image/index/메인슬라이더1편집.jpg"  width="100%">
                         </div>
 
                         <div>
-                            <img src="${contextPath}/resources/image/index/메인슬라이더2편집.jpg" width="100%">
+                            <img src="resources/image/index/메인슬라이더2편집.jpg" width="100%">
                         </div>
 
                         <div>
-                            <img src="${contextPath}/resources/image/index/메인슬라이더3편집.jpg" width="100%">
+                            <img src="resources/image/index/메인슬라이더3편집.png" width="100%">
                         </div>
-
                     </div>
 
-
                 </section>
-
-
 
 
 
@@ -119,19 +75,16 @@
                     <div class="mainFont bestFont">베스트</div>
 
 
-
-
-
                     <!-- 2-2 베스트 제품 -->
                     <div class="bestItem"> 
 
                             
                         <!-- 베스트제품1 -->
                         <div class="BNitem Bitem1">    
-                            <a href="${contextPath}">    
+                            <a href="#">    
                                 <div class="BNitemPic bestItem1Pic"> 
                                     <figcaption>베스트제품1<br><br> 상세설명칸<br><br> 입니다 </figcaption>
-                                    <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                    <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                         alt="제품사진" id="bestItemPhoto1">
                                 </div>
                             </a>
@@ -145,10 +98,10 @@
                                                  
                         <!-- 베스트제품2 -->  
                         <div class="BNitem Bitem2">  
-                            <a href="${contextPath}">  
+                            <a href="#">  
                                 <div class="BNitemPic bestItem2Pic"> 
                                     <figcaption>베스트제품2<br><br> 상세설명칸<br><br> 입니다 </figcaption> 
-                                    <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                    <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                         alt="제품사진" id="bestItemPhoto2"> 
                                 </div>
                             </a>
@@ -162,10 +115,10 @@
 
                         <!-- 베스트제품3 -->
                         <div class="BNitem Bitem3">
-                            <a href="${contextPath}">
+                            <a href="#">
                                 <div class="BNitemPic bestItem3Pic">
                                     <figcaption>베스트제품3<br><br> 상세설명칸<br><br> 입니다 </figcaption>
-                                    <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                    <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                     alt="제품사진" id="bestItemPhoto3">
                                 </div>
                             </a>
@@ -180,10 +133,10 @@
 
                         <!-- 베스트제품4 -->
                         <div class="BNitem Bitem4">
-                            <a href="${contextPath}">
+                            <a href="#">
                                 <div class="BNitemPic bestItem1Pic">
                                     <figcaption>베스트제품4<br><br> 상세설명칸<br><br> 입니다 </figcaption>
-                                    <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                    <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                     alt="제품사진" id="bestItemPhoto4">
                                 </div>
                             </a>
@@ -224,10 +177,10 @@
 
                         <!-- 신제품1 -->
                         <div class="BNitem Nitem1">
-                            <a href="${contextPath}">
+                            <a href="#">
                                 <div class="BNitemPic newItem1Pic">
                                     <figcaption>신제품1<br><br> 상세설명칸<br><br> 입니다 </figcaption>
-                                    <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                    <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                         alt="제품사진" id="newItemPhoto1">  
                                 </div>
                             </a>
@@ -241,10 +194,10 @@
 
                         <!-- 신제품2 -->
                         <div class="BNitem Nitem2">
-                            <a href="${contextPath}">
+                            <a href="#">
                                 <div class="BNitemPic newItem2Pic">
                                     <figcaption>신제품2<br><br> 상세설명칸<br><br> 입니다 </figcaption>
-                                    <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                    <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                         alt="제품사진" id="newItemPhoto2">
                                 </div>
                             </a>
@@ -257,10 +210,10 @@
 
                         <!-- 신제품3 -->
                         <div class="BNitem Nitem3">
-                            <a href="${contextPath}">
+                            <a href="#">
                                 <div class="BNitemPic newItem3Pic">
                                     <figcaption>신제품3<br><br> 상세설명칸<br><br> 입니다 </figcaption>
-                                    <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                    <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                         alt="제품사진" id="newItemPhoto3">
                                 </div>
                             </a>
@@ -273,10 +226,10 @@
 
                         <!-- 신제품4 -->
                         <div class="BNitem Nitem4">
-                            <a href="${contextPath}">
+                            <a href="#">
                                 <div class="BNitemPic newItem4Pic">
                                     <figcaption>신제품4<br><br> 상세설명칸<br><br> 입니다 </figcaption>
-                                    <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                    <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                         alt="제품사진" id="newItemPhoto4">
                                 </div>
                             </a>
@@ -322,10 +275,10 @@
 
                             <!-- 제품1 -->
                             <div class="item item1">
-                                <a href="${contextPath}">
+                                <a href="#">
                                     <div class="itemPic item1Pic">
                                         <figcaption>제품1<br><br>상세설명칸<br><br>입니다</figcaption>
-                                        <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                        <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                             alt="이미지입니다" id="itemPhoto1">
                                     </div>
                                 </a>
@@ -340,10 +293,10 @@
 
                             <!-- 제품2 -->
                             <div class="item item2">
-                                <a href="${contextPath}">
+                                <a href="#">
                                     <div class="itemPic item2Pic">
                                         <figcaption>제품2<br><br>상세설명칸<br><br>입니다</figcaption>
-                                        <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                        <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                             alt="이미지입니다" id="itemPhoto2">
                                     </div>
                                 </a>    
@@ -358,10 +311,10 @@
 
                             <!-- 제품3 -->
                             <div class="item item3">
-                                <a href="${contextPath}">
+                                <a href="#">
                                     <div class="itemPic item3Pic">
                                         <figcaption>제품3<br><br>상세설명칸<br><br>입니다</figcaption>
-                                        <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                        <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                             alt="이미지입니다" id="itemPhoto3">
                                     </div>
                                 </a>
@@ -385,10 +338,10 @@
 
                             <!-- 제품4 -->
                             <div class="item item4">
-                                <a href="${contextPath}">
+                                <a href="#">
                                     <div class="itemPic item4Pic">
                                         <figcaption>제품4<br><br>상세설명칸<br><br>입니다</figcaption>
-                                        <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                        <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                             alt="이미지입니다" id="itemPhoto4"> 
                                     </div>
                                 </a>
@@ -403,10 +356,10 @@
 
                             <!-- 제품5 -->
                             <div class="item item5">
-                                <a href="${contextPath}">
+                                <a href="#">
                                     <div class="itemPic item5Pic">
                                         <figcaption>제품5<br><br>상세설명칸<br><br>입니다</figcaption>
-                                        <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg"  
+                                        <img src="resources/image/index/제품_오쏘뮬.jpg"  
                                             alt="이미지입니다" id="itemPhoto5">   
                                     </div>
                                 </a>
@@ -421,10 +374,10 @@
 
                             <!-- 제품6 -->
                             <div class="item item6">
-                                <a href="${contextPath}">
+                                <a href="#">
                                     <div class="itemPic item6Pic">
                                         <figcaption>제품6<br><br>상세설명칸<br><br>입니다</figcaption>
-                                        <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg"  
+                                        <img src="resources/image/index/제품_오쏘뮬.jpg"  
                                             alt="이미지입니다" id="itemPhoto6">
                                     </div>
                                 </a>
@@ -447,10 +400,10 @@
 
                             <!-- 제품7 -->
                             <div class="item item7">
-                                <a href="${contextPath}">
+                                <a href="#">
                                     <div class="itemPic item7Pic">
                                         <figcaption>제품7<br><br>상세설명칸<br><br>입니다</figcaption>
-                                        <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg"  
+                                        <img src="resources/image/index/제품_오쏘뮬.jpg"  
                                             alt="이미지입니다" id="itemPhoto7">
                                     </div>
                                 </a>
@@ -465,10 +418,10 @@
 
                             <!-- 제품8 -->
                             <div class="item item8">
-                                <a href="${contextPath}">
+                                <a href="#">
                                     <div class="itemPic item8Pic">
                                         <figcaption>제품8<br><br>상세설명칸<br><br>입니다</figcaption>
-                                        <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                        <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                             alt="이미지입니다" id="itemPhoto8">
                                     </div>
                                 </a>
@@ -484,10 +437,10 @@
 
                             <!-- 제품9 -->
                             <div class="item item9">
-                                <a href="${contextPath}">
+                                <a href="#">
                                     <div class="itemPic item9Pic">
                                         <figcaption>제품8<br><br>상세설명칸<br><br>입니다</figcaption>
-                                        <img src="${contextPath}/resources/image/index/제품_오쏘뮬.jpg" 
+                                        <img src="resources/image/index/제품_오쏘뮬.jpg" 
                                             alt="이미지입니다" id="itemPhoto9">
                                     </div>
                                 </a>
@@ -521,9 +474,6 @@
 
 
 
-
-
-
             <!-- 가운데페이지 끝 -->
             </section>
 
@@ -535,8 +485,8 @@
 
                  <!-- 인체사진 플로팅바-->
                  <div class="floating">
-                    <a href="${contextPath}"> 
-                        <img id="people" src="${contextPath}/resources/image/index/인체이미지누끼.png" >
+                    <a href="${contextPath}/product/people"> 
+                        <img id="people" src="resources/image/index/인체이미지누끼.png" >
                     </a>
                 </div>
             
@@ -547,31 +497,9 @@
         <!-- content 전체 감싸는 영역 끝 -->
 
        
-
-
-
-
-
-     
-
-
-
-        
-        
-        
-        
-        
-        
-   
-	<form action="cart/shoppingCart" method="get">
-		<input type="text" name="userNum">
-		<button>담기</button>
-	</form>
     <!-- 헤더, 컨텐츠 끝 -->
     </main>
 
-    <!-- 헤더 -->
-    <jsp:include page="/WEB-INF/views/common/header.jsp"/>
 
     <!-- 푸터 -->
   	<jsp:include page="/WEB-INF/views/common/footer.jsp"/>
@@ -581,5 +509,6 @@
    
     <!-- main.js 연결 -->
     <script src="${contextPath}/resources/js/main.js"></script>
+    <script src="${contextPath}/resources/js/index.js"></script>
 </body>
 </html>

@@ -3,8 +3,24 @@
 <properties>
 	<comment>board-sql.xml</comment>
 
-	<entry key=""></entry>
-	<entry key=""></entry>
+
+	<!-- 게시물 등록 쿼리 -->
+	<!--  컬럼 순서  -->
+	<entry key="">
+		INSERT INTO()
+	
+	</entry>
+	
+	
+	<!-- 게시물 삭제 쿼리 -->
+	<entry key="inquiryDelete">
+		DELETE FROM INQUIRY
+		JOIN MEMBER USING (MEMBER_NO)
+		WHERE MEMBER_PW = ?
+	</entry>
+	
+	
+	
 	<entry key=""></entry>
 	<entry key=""></entry>
 	<entry key=""></entry>

@@ -20,6 +20,8 @@ public class BoardService {
 		
 		int result = 0;
 		
+		
+		
 		result = dao.inquiryAdd(conn, content);
 		
 		if(result > 0) {

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import edu.kh.yosangso.board.model.service.BoardService;
 
-@WebServlet()
+@WebServlet("/board/inquiry")
 public class InquiryAddServlet extends HttpServlet{
 	
 	
